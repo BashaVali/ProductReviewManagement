@@ -27,7 +27,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select \n1.AddProductList\n2.RetriveTopRecords\n3.RetriveAllRecords\n4.Exit");
+                Console.WriteLine("Select \n1.AddProductList\n2.RetriveTopRecords\n3.RetriveAllRecords\n4.RetriveAllRecordsGroupBy\n5.Exit");
                 int sel = Convert.ToInt32(Console.ReadLine());
                 switch (sel)
                 {
@@ -41,6 +41,9 @@
                         productReviewMain.RetriveAllRecords();
                         break;
                     case 4:
+                        productReviewMain.RetriveAllRecordsGroupBy();
+                        break; 
+                    case 5:
                         flag = false;
                         break;
                 }
