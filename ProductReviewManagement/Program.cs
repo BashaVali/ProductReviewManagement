@@ -22,7 +22,12 @@
                 new ProductReview() { ProductId = 13, userId = 13, Rating = 3, Review = "Average", IsLike = true },
                 new ProductReview() { ProductId = 14, userId = 14, Rating = 4, Review = "Good", IsLike = false },
                 new ProductReview() { ProductId = 15, userId = 15, Rating = 3, Review = "Average", IsLike = true },
-            };
+             };
+
+            ProductReviewMain productReviewMain = new ProductReviewMain();
+            productReviewMain.AddProductList(productReviews);
+            productReviewMain.RetriveTopRecords();
         }
     }
 }
+       
