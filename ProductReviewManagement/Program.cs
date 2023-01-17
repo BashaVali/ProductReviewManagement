@@ -23,11 +23,33 @@
                 new ProductReview() { ProductId = 14, userId = 14, Rating = 4, Review = "Good", IsLike = false },
                 new ProductReview() { ProductId = 15, userId = 15, Rating = 3, Review = "Average", IsLike = true },
              };
-
             ProductReviewMain productReviewMain = new ProductReviewMain();
-            productReviewMain.AddProductList(productReviews);
-            productReviewMain.RetriveTopRecords();
+            bool flag = true;
+            while (flag)
+            {
+                Console.WriteLine("Select \n1.AddProductList\n2.RetriveTopRecords\n3.RetriveAllRecords\n4.Exit");
+                int sel = Convert.ToInt32(Console.ReadLine());
+                switch (sel)
+                {
+                    case 1:
+                        productReviewMain.AddProductList(productReviews);
+                        break;
+                    case 2:
+                        productReviewMain.RetriveTopRecords();
+                        break;
+                    case 3:
+                        productReviewMain.RetriveAllRecords();
+                        break;
+                    case 4:
+                        flag = false;
+                        break;
+                }
+            }
         }
     }
 }
-       
+
+
+            
+            
+           
